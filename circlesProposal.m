@@ -1,9 +1,9 @@
 function out=circlesProposal(x)
 
-i = randi(5);
+i = randi(3);
 if i == 1
     out=moveTowardsCenterProposal(x);
-else
-    out=wideScaleRandomNoisePairProposal(x);
+    return
 end
+out = wideScaleRandomNoiseMix3Proposal(x);
     

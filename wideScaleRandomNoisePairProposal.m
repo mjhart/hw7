@@ -5,13 +5,10 @@ function out=wideScaleRandomNoisePairProposal(x)
 r = 10^(rand() * 6 - 4);
 
 out = zeros(size(x));
-for i=1:length(out)
+for i=1:numel(out)
     out(i) = x(i);
 end
 
 i = (randi(length(x) / 2) - 1) * 2 + 1;
-%delta = randn() * r;
-%out(i) = out(i) + delta;
-%out(i+1) = out(i+1) + delta;
 out(i) = out(i) + randn() * r;
 out(i+1) = out(i+1) + randn() * r;
