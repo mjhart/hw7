@@ -14,6 +14,7 @@ edgel=[.5 .5 .5 .5 .9]; edgesp=[160 180 160 180 160]; edgef=[8 8 8 8 8];
 anglessp=[10 10 5 5]*2; anglesf=[8 8 4 4];
 f=zeros(2,6); v=zeros(2,6); p=[0 0 -.5 .5 .5 .3;2 1 0 1 0 3.8]/2;
 for i=dt/2:dt:20,
+    pause(0.01);
     t=plan(:,floor(i)+1)*(1+floor(i)-i)+plan(:,ceil(i)+1)*(i-floor(i));
     contact=(p(2,:)<=0); p(2,contact)=0; %contact with the ground
     anglesl=-[2.8+t(1) 2.8-t(1) (1-t(2))*.9 (1+t(2))*.9];
