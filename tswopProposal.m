@@ -1,6 +1,6 @@
 function out=tswopProposal(x)
 
-i=randi(4);
+i=randi(6);
 
 if i == 1
     out = alternatingNoise(x);
