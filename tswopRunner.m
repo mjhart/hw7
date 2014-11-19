@@ -1,7 +1,4 @@
 start = rand(2,24) .* 2 - 1;
-%start = best;
-%start = zeros(2,20);
-%start(:,:) = bestSoFar(:,1:20);
 bestSoFar = localSearch(@tswopN, @tswopProposal, start, 0.5, -1, 1, 10, 0.005);
 for i=2:2:22
     disp(i)
@@ -22,7 +19,3 @@ for i=2:2:22
 end
 
 localSearch(@tswop, @tswopProposal, bestSoFar(:,1:20), 0.5, -1, 1, 10, 0.005)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%localSearch(@tswop, @tswopProposal, start, 0.1, -1, 1, 20, 0.005)

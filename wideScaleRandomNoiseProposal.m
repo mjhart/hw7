@@ -4,6 +4,6 @@ function out=wideScaleRandomNoiseProposal(x)
 r = 10^(rand() * 6 - 4);
 
 out = zeros(size(x));
-for i=1:length(out)
+for i=1:numel(out)
     out(i) = x(i) + randn() * r;
 end
