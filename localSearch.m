@@ -16,9 +16,8 @@ lastUpdate = now;
 x = startingX;
 while (now - lastUpdate) * 86400 < timeDelta
     xp = proposalFunc(x);
-    n=size(x, 1);
-    for j=1:n
-        for i = 1:size(x,2)
+    for j=1:size(xp,1)
+        for i = 1:size(xp,2)
             if xp(j,i) > upperBoundOnX
                 xp(j,i) = upperBoundOnX;
             elseif xp(j,i) < lowerBoundOnX
